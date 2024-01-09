@@ -1,19 +1,20 @@
-# Acessibility Testing Framework
+# Accessibility Testing Framework
 
-Quick framework with aXe and Python for local acessibility tests. Uses Pytest to generate .html reports
+Quick framework with aXe and Python for local accessibility tests. Uses Pytest to run and generate .html reports
 
-## aXe
+## The Weapon
 
-[aXe](https?//deque.com/axe), or Accessibility Engine, is an open-source testing tool designed to identify and help resolve web accessibility issues. It is commonly used for auditing and ensuring that web applications comply with accessibility standards, such as the Web Content Accessibility Guidelines (WCAG). aXe is maintained by Deque Systems, a company that focuses on digital accessibility solutions.
+[aXe](https://deque.com/axe), or Accessibility Engine, is an open-source testing tool designed to identify and help resolve web accessibility issues. It is commonly used for auditing and ensuring that web applications comply with accessibility standards, such as the Web Content Accessibility Guidelines (WCAG). aXe is maintained by Deque Systems, a company that focuses on digital accessibility solutions.
 
-## Testing Scenarios
+## Trowing Axes
 
-From the 'tests/test_acessibility.py' file
-- test_acessibility_violations_existence (check if there is violations)
-- test_some_acessibility_violation (handle specific violation validation)
-- test_acessibility_violations (check all acessibility violations)
+From the 'tests/test_acessibility.py' file, we have the below scenarios
+- test_accessibility_violations_positive (aXe checks if there is NOTICED violations, fail test if there is NO violations)
+- test_accessibility_violations_negative (aXe checks if there is NO NOTICED violations, fail test if there ARE violations)
+- test_some_accessibility_violation (handle specific violation validation, fail test if accepted violations are NOTICED)
+- test_accessibility_violations (aXe checks all acessibility violations, fail test if there ARE violations)
 
-## Dependencies
+## Go Berserk
 
 Install [Python](https://www.python.org/), [Pip](https://pypi.org/) and [pytest](https://docs.pytest.org/) then run
 
@@ -29,12 +30,12 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-- Run (reports folder should be generated on root)
+- Run (report folder should be generated on root)
 ```
-python3 -v --html=reports/report.html
+pytest -v --html=report/test_acessibility_report.html
 ```
 
-## Room for Improvement
+## Longhouse for Improvement
 
 - Add CI/CD
 - Add BDD

@@ -1,10 +1,13 @@
 # utils/axe_utils.py
 
-# import dependencies
+import logging
 from axe_selenium_python import Axe
 
+# Configure logging
+logging.basicConfig(filename='repor/accessibility_log.txt', level=logging.INFO)
+
 # execute aXe violations validation
-def execute_acessibility_validation(driver):
+def execute_accessibility_validation(driver):
     # Create aXe instance with the driver
     axe = Axe(driver)
     
@@ -17,8 +20,9 @@ def execute_acessibility_validation(driver):
     # Checking for accessibility violations
     violations = results["violations"]
     
-    # Printing the violations
+    # Printing and/or Logging violations
     for violation in violations:
-        print(f"Violation: {violation['help']}")
-    
+        #print(f"Violation: {violation['help']}") # best for local runs & debug
+        logging.info(f"Violation: {violation['help']}") # best for ci/cd runs
+
     return results
