@@ -1,0 +1,4 @@
+selenium
+axe-selenium-python
+pytest
+pytest-html
