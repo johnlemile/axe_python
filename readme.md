@@ -37,5 +37,6 @@ pytest -v --html=report/test_acessibility_report.html
 
 ## Longhouse for Improvement
 
+- Improve config
 - Add browsers features
 - Add CI/CD
