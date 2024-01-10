@@ -1,6 +1,6 @@
 # Accessibility Testing Framework
 
-Quick framework with aXe and Python for local accessibility tests. Uses Pytest to run and generate .html reports
+Quick framework with aXe and Python for local accessibility tests on browser. Uses Pytest to run and generate .html reports.
 
 ## The Weapon
 
@@ -37,5 +37,5 @@ pytest -v --html=report/test_acessibility_report.html
 
 ## Longhouse for Improvement
 
+- Add browsers features
 - Add CI/CD
-- Add BDD
